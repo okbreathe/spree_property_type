@@ -40,7 +40,6 @@
     <table class="table" id='listing_properties' data-hook>
       <thead>
       <tr data-hook="listing_properties_header">
-        <th><%= Spree.t(:icon) %></th>
         <th><%= Spree.t(:name) %></th>
         <th><%= Spree.t(:presentation) %></th>
         <th><%= Spree.t(:type) %></th>
@@ -50,7 +49,6 @@
       <tbody>
       <% @properties.each do |property| %>
           <tr id="<%= spree_dom_id property %>" data-hook="listing_properties_row">
-            <td><%= image_tag property.icon(:mini), :size => '24x24', :border => 1 %></td>
             <td><%= property.name %></td>
             <td><%= property.presentation %></td>
             <td><%= property.property_type_name %></td>
